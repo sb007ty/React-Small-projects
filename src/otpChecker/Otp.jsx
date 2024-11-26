@@ -5,6 +5,10 @@ function Otp() {
   const [currentNum, setCurrentNum] = useState(0);
   const [otpVal, setOtpVal] = useState(Array(6).fill(""));
   console.log(otpVal, "currn");
+  const resetDisabled =
+    otpVal.filter((item) => item !== "").length > 0 ? false : true;
+  const submitDisabled =
+    otpVal.filter((item) => item !== "").length === 6 ? false : true;
   return (
     <div>
       <div>
@@ -25,10 +29,12 @@ function Otp() {
         onClick={(e) => {
           setOtpVal(Array(6).fill(""));
         }}
+        disabled={resetDisabled}
       >
         Reset
       </button>
       <button
+        disabled={submitDisabled}
         onClick={(e) => {
           // fetch("https://example.org/post", {
           //   method: "POST",
