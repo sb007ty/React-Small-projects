@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Counter from "./memoryCounter/Counter";
 import Otp from "./otpChecker/Otp";
+import Histogram from "./histogram/Histogram";
 
 function App() {
   const [count, setCount] = useState([]);
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       {/* <Counter /> */}
-      <Otp />
+      {/* <Otp /> */}
+      <Histogram />
     </>
   );
 }
