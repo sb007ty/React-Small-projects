@@ -1,0 +1,12 @@
+.circle-game {
+  width: 800px;
+  height: 50vh;
+  background-color: rgb(192, 184, 184);
+  position: relative;
+}
+.circle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
