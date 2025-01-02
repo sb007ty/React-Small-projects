@@ -9,7 +9,12 @@ function CircleGame() {
   function clickDiv(e) {
     const { x, y } = circleGameRef.current.getBoundingClientRect();
     console.log("clientboundrec");
-    const randomNum = Math.floor(Math.random() * 9);
+    const randomNum = Math.floor(Math.random() * 8);
+    const mousPosX = e.pageX;
+    const mousPosY = e.pageY;
+    console.log(mousPosX, mousPosY, "mousePos*", e.clientX);
+    console.log(x, y, "rectpos*");
+    console.log(mousPosX, mousPosY);
     const newMousePos = {
       xVal: e.pageX - x,
       yVal: e.pageY - y,
@@ -35,7 +40,7 @@ function CircleGame() {
     setUndoCircle(-1);
   }
   return (
-    <div>
+    <div style={{ overflow: "auto" }} className="circle-game-container">
       <div className="circle-game" onClick={clickDiv} ref={circleGameRef}>
         {circles
           .filter((_, index) => {

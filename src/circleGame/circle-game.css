@@ -1,8 +1,24 @@
+@media screen and (max-width: 900px) {
+  .circle-game-container {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .circle-game-container {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .circle-game-container {
+    max-width: 200px;
+  }
+}
 .circle-game {
   width: 800px;
   height: 50vh;
   background-color: rgb(192, 184, 184);
   position: relative;
+  overflow: hidden;
 }
 .circle {
   position: absolute;
