@@ -10,8 +10,8 @@ function CircleGame() {
     const { x, y } = circleGameRef.current.getBoundingClientRect();
     console.log("clientboundrec");
     const randomNum = Math.floor(Math.random() * 8);
-    const mousPosX = e.pageX;
-    const mousPosY = e.pageY;
+    const mousPosX = e.clientX;
+    const mousPosY = e.clientY;
     console.log(mousPosX, mousPosY, "mousePos*", e.clientX);
     console.log(x, y, "rectpos*");
     console.log(mousPosX, mousPosY);
